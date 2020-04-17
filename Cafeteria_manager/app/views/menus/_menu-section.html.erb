@@ -1,0 +1,12 @@
+<section>
+  <%menus.all.each do |menu|%>
+    <li class="MenuItem">
+      <form action="menus/<%=menu.id%>" method="GET">
+        <label class="MenuItem-container">
+          <p class="MenuItem-text"><%= menu.menu_name %></p>
+        </label>
+        <input type="submit" value="open"/>
+      </form>
+    </li>
+  <%end%>
+</section>
