@@ -1,10 +1,10 @@
 <section>
   <%menus.all.each do |menu|%>
     <li class="MenuItem">
-      <%=form_with(url: "/menus/#{menu.id}", method:"get") do%>
+      <%=link_to menu_path(menu.id) do%>
         <label class="MenuItem-container">
           <p class="MenuItem-text"><%= menu.menu_name %></p>
-          <input type="image" src="trash-can.svg"/>
+          <%=image_tag 'trash-can.svg' %>
         </label>
       <%end%>
     </li>
