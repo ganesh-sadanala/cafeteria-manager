@@ -8,12 +8,42 @@ body {
   font-size: 48px;
   line-height: 1.5;
 }
-.MenuItem-text {
+.Menu-text {
   font-size: 24px;
   line-height: 1.4;
   padding-left: 20px;
+  color: black;
+}
+.Menu-container {
+  display: flex;
+}
+/* .Menu-container:hover {
+  background-color: #f1edf7;
+}
+.Menu-container:hover .Menu-enter {
+  visibility: visible;
+}
+
+.Menu-enter {
+  visibility: hidden;
+  margin-left: 8px;
+} */
+.Menu-link {
+  text-decoration: none;
 }
 .MenuItem-container {
   display: flex;
-  text-decoration: none;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.MenuItem-name {
+  font-size: 30px;
+  padding-left: 20px;
+}
+.MenuItem-price {
+  padding-left: 20px;
+  font-size: 15px;
+}
+.MenuItem {
+  padding-top: 20px;
 }
