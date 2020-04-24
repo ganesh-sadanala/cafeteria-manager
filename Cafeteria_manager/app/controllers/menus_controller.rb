@@ -10,7 +10,7 @@ class MenusController < ApplicationController
 
   def create
     name = params[:menu_name]
-    new_menu = MenuItem.create!(
+    Menu.create!(
       menu_name: name,
     )
     redirect_to menus_path
