@@ -31,6 +31,9 @@ body {
 .Menu-link {
   text-decoration: none;
 }
+.Menu-form {
+  display: flex;
+}
 .MenuItem-container {
   display: flex;
   align-items: center;

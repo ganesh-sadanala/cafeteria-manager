@@ -1,6 +1,5 @@
 class MenusController < ApplicationController
   def index
-    #render plain: Menu.all.map { |menu| menu.to_pleasant_string }.join("\n")
     render "index"
   end
 
@@ -19,5 +18,6 @@ class MenusController < ApplicationController
   def destroy
     id = params[:id]
     Menu.find(id).destroy
+    redirect_to menus_path
   end
 end

@@ -1,11 +1,14 @@
 <section class="Menu">
   <%menus.all.each do |menu|%>
     <li>
-      <%=link_to menu_path(menu.id),class: "Menu-link" do%>
-        <label class="Menu-container">
-          <p class="Menu-text"><%= menu.menu_name %></p>
-          <%=image_tag 'arrow-right.svg' %>
-        </label>
+      <%=form_with(url: "/menus/#{menu.id}", method:"delete",class:"Menu-form") do%>
+        <%=link_to menu_path(menu.id),class: "Menu-link" do%>
+          <label class="Menu-container">
+            <p class="Menu-text"><%= menu.menu_name %></p>
+            <%=image_tag 'arrow-right.svg' %>
+          </label>
+        <%end%>
+        <%=image_submit_tag 'trash-can.svg'%>
       <%end%>
     </li>
   <%end%>
