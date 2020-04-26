@@ -1,5 +1,5 @@
 <section class="Menu">
-  <%menus.all.each do |menu|%>
+  <%menus.each do |menu|%>
     <li>
       <%=form_with(url: "/menus/#{menu.id}", method:"delete",class:"Menu-form"  ) do%>
         <%=link_to menu_path(menu.id),class: "Menu-link" do%>
