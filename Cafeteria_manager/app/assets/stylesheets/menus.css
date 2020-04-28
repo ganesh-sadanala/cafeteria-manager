@@ -17,17 +17,6 @@ body {
 .Menu-container {
   display: flex;
 }
-/* .Menu-container:hover {
-  background-color: #f1edf7;
-}
-.Menu-container:hover .Menu-enter {
-  visibility: visible;
-}
-
-.Menu-enter {
-  visibility: hidden;
-  margin-left: 8px;
-} */
 .Menu-link {
   text-decoration: none;
 }
