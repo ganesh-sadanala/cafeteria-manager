@@ -12,5 +12,6 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
     )
+    redirect_to "/"
   end
 end
