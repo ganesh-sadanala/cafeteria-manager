@@ -1,11 +1,9 @@
 <section class="MenuItem">
-  <% menu.each do |item| %>
-    <%= form_with url: orders_path do |form| %>
+  <%= form_for :order do |form|%>
+    <% menu.each do |item| %>
       <li>
         <label class="MenuItem-container">
-          <%# <%= form.check_box :item_ids, { multiple: true, id: "item-#{item.id}" }, item %>
-          <input type="checkbox" name="item_ids[]" value='<%= item.id %>' class="MenuItem-checkbox"/>
-          <%# <%= check_box_tag 'menu_item', '1', false, class:"MenuItem-checkbox" %>
+          <%= form.check_box :item_ids, {multiple: true}, 1, nil %>
           <p class="MenuItem-name"> <%=item.menu_item_name%> </p>
           <p class="MenuItem-price"> <%=item.menu_item_price%> </p>
           <%= form_with(url: menu_item_path(item.id), method:"delete") do%>
@@ -14,5 +12,6 @@
         </label>
       </li>
     <% end %>
+    <%= form.submit "Place Order" %>
   <% end %>
 </section>
