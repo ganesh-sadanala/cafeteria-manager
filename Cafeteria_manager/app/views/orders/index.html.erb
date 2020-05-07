@@ -1,0 +1,15 @@
+<section>
+  <p>Orders to be Delivered</p>
+  <%= @orders.all.each do |order| %>
+    <li class="Orders">
+      <label>
+        <%= form_with(url: order_path(order.id), method:"put", class: "Orders-container") do %>
+          <%= check_box_tag 'delivered', '1', checked = false, onclick: 'this.form.submit()' %>
+          <p class="Order-user-name"> <%= order.user.first_name %> </p>
+          <p class="Order-user-id"> <%= order.user.id %> </p>
+          <p class="Order-id"> <%= order.id %> </p>
+        <% end %>
+      </label>
+    </li>
+  <% end %>
+</section>
