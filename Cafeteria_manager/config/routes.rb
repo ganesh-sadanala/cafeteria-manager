@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :orders
   resources :admin
+  get "/active" => "menus#active_menus", as: :active_menus
   get "/cart" => "orders#show_cart", as: :cart_orders
   resources :order_items
   post "/signin" => "sessions#create", as: :sessions

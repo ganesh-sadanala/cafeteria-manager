@@ -23,3 +23,10 @@ body {
 .Menu-form {
   display: flex;
 }
+.Menu-checkbox {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+}
