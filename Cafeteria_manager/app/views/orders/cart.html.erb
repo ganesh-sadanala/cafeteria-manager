@@ -1,5 +1,7 @@
 <section>
   <p>My Cart</p>
+  <table>
+
   <%= form_with url:cart_orders_path, method: "post"  do |form| %>
     <% @orders.all.each do |order| %>
       <li class="Orders">
@@ -13,4 +15,5 @@
     <% end %>
     <%= form.submit "Place Order" %>
   <% end %>
+  </table>
 </section>
