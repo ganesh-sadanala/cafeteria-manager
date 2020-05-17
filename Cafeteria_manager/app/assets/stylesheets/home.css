@@ -6,11 +6,24 @@
   font-size: 16px;
   margin-bottom: 20px;
 }
-.User-Header {
-  padding: 10px;
-  font-size: 14px;
-  margin-bottom: 10px;
-  background-color: lightgray;
+.NavBar-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding: 30px;
+  font-size: larger;
+}
+.NavBar {
+  color: #453c52;
+}
+
+.NavBar-content {
+  padding-left: 20px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+.NavBar .fa {
+  color: black;
+  padding-left: 20px;
+  padding-right: 10px;
 }
