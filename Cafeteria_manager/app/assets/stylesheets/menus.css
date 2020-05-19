@@ -37,3 +37,8 @@
   font-size: xx-large;
   margin-bottom: 10px;
 }
+.AddMenu-name {
+  padding: 6px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
