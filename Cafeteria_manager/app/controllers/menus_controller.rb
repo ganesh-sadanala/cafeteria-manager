@@ -16,10 +16,13 @@ class MenusController < ApplicationController
 
   def create
     name = params[:menu_name]
-    Menu.create!(
-      menu_name: name,
-    )
-    redirect_to new_menu_path
+    new_menu = Menu.new(menu_name: name, active: false)
+    if new_menu.save
+      redirect_to new_menu_path
+    else
+      flash[:error] = new_menu.errors.full_messages.join(",")
+      redirect_to new_menu_path
+    end
   end
 
   def destroy

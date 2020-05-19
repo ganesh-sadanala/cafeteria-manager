@@ -41,6 +41,11 @@
       </div>
     <% end %>
     <div class="Body-content">
+      <% if flash[:error] %>
+        <p class="Flash-error">
+          <%= flash[:error] %>
+        </p>
+      <% end %>
       <%= yield %>
     </div>
   </body>
