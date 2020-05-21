@@ -24,10 +24,18 @@
             <li>
             <% if @current_user.role == 'owner' %>
               <li class="NavBar-item-wrapper">
+                <i class="fa fa-home"></i>
+                <%= link_to "Home", admin_index_path, method: "get", class:"NavBar-content"%>
+              </li>
+              <li class="NavBar-item-wrapper">
                 <i class="fa fa-truck"></i>
                 <%= link_to "Pending-orders", orders_path, method: "get", class:'NavBar-content' %>
               </li>
             <% end %>
+            <li class="NavBar-item-wrapper">
+              <i class="fa fa-hamburger"></i>
+              <%= link_to "Menus", menus_path, method: "get", class: 'NavBar-content' %>
+            </li>
             <li class="NavBar-item-wrapper">
               <i class="fa fa-shopping-cart"></i>
               <%= link_to "My Cart", show_cart_path, method: "get", class:"NavBar-content" %>
@@ -36,6 +44,7 @@
               <i class="fa fa-power-off"></i>
               <%= link_to "Sign-out", destroy_session_path, method: "delete", class:"NavBar-content" %>
             </li>
+
             <i class="fa fa-user"></i>
           </ul>
       </div>

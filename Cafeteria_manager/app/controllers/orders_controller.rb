@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
 
   def show_cart
     @orders = Order.cart_items(current_user.orders)
-    render "cart.html.erb"
+    render "cart"
   end
 
   def cart_to_order
