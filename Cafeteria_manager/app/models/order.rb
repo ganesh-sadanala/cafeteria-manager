@@ -22,16 +22,6 @@ class Order < ActiveRecord::Base
     where(order_delivered: false)
   end
 
-  def self.cart_items(orders)
-    orders.where(add_to_cart: true)
-  end
-
-  def self.cart_order(order_ids)
-    order_ids.each { |order_id|
-      place_order(Order.find(order_id))
-    }
-  end
-
   def self.place_order(order)
     order.add_to_cart = false
     order.place_order = true

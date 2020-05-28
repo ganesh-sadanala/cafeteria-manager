@@ -8,10 +8,12 @@
   <%end%>
 </article>
 <%=render partial: "menu_item_section_owner", locals:{
-  menu: Menu.find(params[:id]).menu_items
+  menu: Menu.find(params[:id]).menu_items,
+  menu_id: params[:id]
 }%>
 <% else %>
   <%= render partial: "menu_item_section_user", locals:{
-    menu: Menu.find(params[:id]).menu_items
+    menu: Menu.find(params[:id]).menu_items,
+    menu_id: params[:id]
   } %>
 <% end %>
