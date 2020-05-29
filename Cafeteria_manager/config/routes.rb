@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get "/orders/pending" => "orders#pending", as: :pending_orders
   resources :orders
   resources :admin
-  resources :clerk
   resources :order_items
   get "/" => "home#index"
   post "/cart" => "orders#cart"

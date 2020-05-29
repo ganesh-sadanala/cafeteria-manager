@@ -9,7 +9,7 @@ class HomeController < ApplicationController
       elsif @current_user.role == "owner"
         redirect_to admin_index_path
       else
-        redirect_to clerk_index_path
+        redirect_to pending_orders_path
       end
     else
       render "index"
