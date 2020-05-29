@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
     order.delivered_at = DateTime.now
     order.order_delivered = true
     order.save!
-    redirect_to orders_path
+    redirect_to pending_orders_path
   end
 
   def cart
@@ -43,5 +43,10 @@ class OrdersController < ApplicationController
       end
     end
     redirect_to menu_path(params[:menu_id])
+  end
+
+  def pending
+    @orders = Order.pending_orders?
+    render "pending"
   end
 end
