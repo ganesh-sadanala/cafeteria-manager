@@ -1,15 +1,8 @@
-body {
+body,
+html {
   font-family: sans-serif;
-  line-height: 1;
   background-color: #fbfafc;
-}
-.Home-title {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-.Home-authenticate {
-  font-size: 16px;
-  margin-bottom: 20px;
+  height: 100%;
 }
 .NavBar-items {
   display: flex;
@@ -41,11 +34,57 @@ body {
   margin-right: auto;
 }
 .Body-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/* .Body-content {
   width: 500px;
   margin: 50px auto;
-}
+} */
 .Flash-error {
   color: darkred;
   margin-bottom: 20px;
   font-size: 16px;
+}
+.Cafeteria-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("rails-home-page.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.Cafeteria-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.Cafeteria-text h1 {
+  font-size: 150px;
+}
+.Cafeteria-text p {
+  font-size: x-large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.Cafeteria-auth {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  right: 10%;
+}
+.Cafeteria-auth p {
+  margin-top: 20px;
+  font-size: large;
+  padding-right: 30px;
+}
+.Cafeteria-auth-url {
+  text-decoration: none;
+  color: white;
 }
