@@ -1,37 +1,37 @@
 .MenuItem-container {
   display: flex;
-  align-items: center;
-  padding-bottom: 10px;
+  background-color: white;
+  padding: 20px;
 }
 .MenuItem-name {
   font-size: 30px;
-  padding-left: 20px;
 }
 .MenuItem-price {
-  padding-left: 5px;
   font-size: 15px;
 }
-.MenuItem {
-  padding-top: 20px;
-  padding-left: 20px;
-}
-table {
-  width: 100%;
-  font-size: large;
-}
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 10px;
-}
-.Table-header {
-  color: darkgrey;
-  font-weight: bold;
-}
+
 .AddMenuItem-name,
 .AddMenuItem-price {
   padding: 6px;
   margin-right: 10px;
   margin-left: 20px;
+}
+.MenuItems-grid {
+  display: grid;
+  width: 70%;
+  margin-left: 3%;
+  padding: 50px;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: auto auto;
+  grid-gap: 30% 20%;
+  justify-items: center;
+}
+.FoodCart-grid {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 500px;
+  grid-template-rows: 100%;
+}
+.Wrapper {
+  display: flex;
 }

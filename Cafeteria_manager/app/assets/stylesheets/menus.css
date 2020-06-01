@@ -3,14 +3,20 @@
   line-height: 1.5;
 }
 .Menu-text {
-  font-size: x-large;
-  line-height: 1.4;
-  color: black;
   text-align: center;
+  color: white;
+  line-height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.Menu-text:hover {
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.2);
 }
 .Menu-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
+}
+.Menu-container:hover {
+  cursor: pointer;
 }
 .Menu-link {
   text-decoration: none;
@@ -30,4 +36,13 @@
   padding: 6px;
   margin-right: 10px;
   margin-left: 20px;
+}
+.Menu-grid {
+  width: 100%;
+  display: grid;
+  margin-left: 3%;
+  grid-template-columns: 18% 18% 18% 18%;
+  font-size: 25px;
+  grid-gap: 5%;
+  padding: 50px;
 }
