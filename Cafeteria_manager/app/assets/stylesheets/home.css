@@ -1,7 +1,7 @@
 body,
 html {
   font-family: sans-serif;
-  background-color: lavender;
+  background-color: lemonchiffon;
   height: 100%;
 }
 .NavBar-items {
@@ -38,10 +38,6 @@ html {
   height: 100%;
   width: 100%;
 }
-/* .Body-content {
-  width: 500px;
-  margin: 50px auto;
-} */
 .Flash-error {
   color: darkred;
   margin-bottom: 20px;

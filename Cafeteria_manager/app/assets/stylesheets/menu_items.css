@@ -12,18 +12,10 @@
 .MenuItem-price {
   font-size: 15px;
 }
-
 .wrapper {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
-}
-
-.AddMenuItem-name,
-.AddMenuItem-price {
-  padding: 6px;
-  margin-right: 10px;
-  margin-left: 20px;
 }
 .Wrapper-grid {
   display: grid;
@@ -45,6 +37,7 @@
   background-color: white;
   margin: 20px;
   text-align: center;
+  padding: 20px;
 }
 .Food-cart h1 {
   margin: 20px;
@@ -54,4 +47,23 @@
   grid-template-columns: 15% 35% 15% 15% 20%;
   grid-gap: 20px 0;
   margin-bottom: 20px;
+}
+.AddMenuItem {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.AddMenuItem-name {
+  margin-right: 10px;
+}
+.AddMenuItem-price {
+  margin-right: 10px;
+}
+.EditMenuItem {
+  display: flex;
+  background-color: white;
+  justify-content: space-around;
+  width: 60%;
+  margin: auto;
+  padding: 10px 0;
 }
