@@ -54,6 +54,12 @@
   width: 60%;
   margin: auto;
   padding: 10px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.EditMenu:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .EditMenu-name {
   font-size: x-large;

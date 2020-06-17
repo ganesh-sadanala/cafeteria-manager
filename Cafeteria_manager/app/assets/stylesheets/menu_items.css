@@ -1,8 +1,12 @@
 .MenuItem-container {
   background-color: white;
   margin: 50px 50px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
-
+.MenuItem-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 .MenuItem-name {
   display: flex;
   justify-content: center;
@@ -38,9 +42,14 @@
   margin: 20px;
   text-align: center;
   padding: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 .Food-cart h1 {
   margin: 20px;
+}
+.Food-cart:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .Item-info {
   display: grid;
@@ -65,5 +74,11 @@
   justify-content: space-around;
   width: 60%;
   margin: auto;
+  margin-bottom: 20px;
   padding: 10px 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.EditMenuItem:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }

@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
     order = Order.find(session[:current_order_id])
     order.update!(total_price: params[:total_price].to_f,
                   place_order: true, order_delivered: false)
+    order.save!
     session[:current_order_id] = Order.new_order(session[:current_user_id])
     redirect_to orders_path
   end

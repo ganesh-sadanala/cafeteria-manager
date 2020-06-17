@@ -7,14 +7,13 @@
   </div>
   <div class="Menus">
     <%Menu.all.each do |menu|%>
-      <li>
-        <% if session[:edit_menu_id].eql? menu.id %>
+        <% if session[:edit_menu_id].to_s == (menu.id).to_s %>
           <div class="EditMenu">
-          <%= form_with url:edit_menu_details_path, method: 'put' do %>
-            <%= hidden_field_tag :menu_id, menu.id %>
-            <%=text_field_tag 'menu_name',menu.menu_name,placeholder:'Change the Menu Name',class:"AddMenu-name"%>
-            <%= submit_tag "change name" %>
-          <% end %>
+            <%= form_with url:edit_menu_details_path, method: 'put' do %>
+              <%= hidden_field_tag :menu_id, menu.id %>
+              <%=text_field_tag 'menu_name',menu.menu_name,placeholder:'Change the Menu Name',class:"AddMenu-name"%>
+              <%= submit_tag "change name" %>
+            <% end %>
           </div>
         <% else %>
             <div class="EditMenu">
@@ -38,7 +37,6 @@
               <%end%>
             </div>
         <% end %>
-      </li>
     <%end%>
   </div>
 </article>

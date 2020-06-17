@@ -20,7 +20,7 @@
       <div class="NavBar">
           <ul class="NavBar-items">
             <li class="NavBar-title">
-              <p style="font-size: xxx-large;color:dimgrey;"><i class="fa fa-utensils"></i>Cafeteria</p>
+              <p style="font-size: xxx-large;color:dimgrey;">Cafeteria</p>
             <li>
             <% if @current_user.role == 'owner' %>
               <li class="NavBar-item-wrapper">
@@ -37,11 +37,20 @@
               <%= link_to "Menus", menus_path, method: "get", class: 'NavBar-content' %>
             </li>
             <li class="NavBar-item-wrapper">
+              <%= link_to "My-Orders", orders_path, method:"get", class:"NavBar-content" %>
+            </li>
+            <li class="NavBar-item-wrapper">
               <i class="fa fa-power-off"></i>
               <%= link_to "Sign-out", destroy_session_path, method: "delete", class:"NavBar-content" %>
             </li>
-
-            <i class="fa fa-user"></i>
+            <div class="dropdown">
+              <li class="dropbtn">
+                <i class="fa fa-user"></i>
+              </li>
+              <div class="dropdown-content">
+                <a href="/users/<%= session[:current_user_id] %>">Profile</a>
+              </div>
+            </div>
           </ul>
       </div>
     <% end %>
