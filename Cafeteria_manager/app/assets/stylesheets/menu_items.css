@@ -53,7 +53,7 @@
 }
 .Item-info {
   display: grid;
-  grid-template-columns: 15% 35% 15% 15% 20%;
+  grid-template-columns: 12% 33% 14% 14% 18% 9%;
   grid-gap: 20px 0;
   margin-bottom: 20px;
 }

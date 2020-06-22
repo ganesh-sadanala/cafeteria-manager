@@ -27,6 +27,7 @@ html {
 
 .NavBar-content:hover {
   text-decoration: underline;
+  text-decoration-color: lightblue;
 }
 
 .NavBar .fa {
@@ -92,6 +93,7 @@ html {
 }
 .Cafeteria-auth-url:hover {
   text-decoration: underline;
+  text-decoration-color: lightblue;
 }
 .dropdown-content {
   display: none;
