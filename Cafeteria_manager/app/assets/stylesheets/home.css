@@ -51,7 +51,7 @@ html {
 }
 .Cafeteria-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("rails-home-page.jpg");
+    image-url("rails-home-page.jpg");
   height: 100%;
   width: 100%;
   background-position: center;

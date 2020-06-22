@@ -10,5 +10,8 @@
   <div class="Edit-user-content">
     <p >Role: <%=  @user.role%> </p>
   </div>
-  <%= link_to "Edit Profile",edit_user_path(session[:current_user_id]),method:"get", class:"Table-button" %>
+  <div style="position:relative;left:20%;margin-top:20px;">
+    <%= link_to "Edit Profile",edit_user_path(session[:current_user_id]),method:"get", class:"Table-button" %>
+
+  </div>
 </div>
