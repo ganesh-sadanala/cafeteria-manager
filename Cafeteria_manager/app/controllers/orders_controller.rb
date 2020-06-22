@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
 
   def create
     @current_order.update!(total_price: params[:total_price].to_f,
-                           status: "placed")
+                           status: "placed", ordered_at: DateTime.now)
     @current_order.save!
     redirect_to orders_path
   end
