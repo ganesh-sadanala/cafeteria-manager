@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       redirect_to user_path(user.id)
     else
       flash[:error] = "Invalid Password"
-      redirect_to edit_user_path(session[:current_user_id])
+      redirect_to edit_user_path(@current_user.id)
     end
   end
 

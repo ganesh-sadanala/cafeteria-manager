@@ -38,3 +38,25 @@
   left: 38%;
   margin-bottom: 10px;
 }
+.OrderDelivered {
+  background-color: green;
+  padding: 10px;
+  color: white;
+}
+.OrderPending {
+  background-color: blue;
+  padding: 10px;
+  color: white;
+}
+.OrderStatus {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.HeaderFont {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: underline;
+  text-decoration-color: lightblue;
+}

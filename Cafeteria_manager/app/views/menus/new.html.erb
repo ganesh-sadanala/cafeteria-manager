@@ -11,8 +11,8 @@
           <div class="EditMenu">
             <%= form_with url:edit_menu_details_path, method: 'put' do %>
               <%= hidden_field_tag :menu_id, menu.id %>
-              <%=text_field_tag 'menu_name',menu.menu_name,placeholder:'Change the Menu Name',class:"AddMenu-name"%>
-              <%= submit_tag "change name" %>
+              <%= text_field_tag 'menu_name',menu.menu_name,placeholder:'Change the Menu Name',class:"AddMenu-name"%>
+              <%= submit_tag "change name", class:"Table-button" %>
             <% end %>
           </div>
         <% else %>

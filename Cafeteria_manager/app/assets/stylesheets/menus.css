@@ -45,7 +45,7 @@
 }
 .AddMenu-name {
   margin-right: 10px;
-  padding: 0 20px;
+  padding: 10px 22px;
 }
 .EditMenu {
   display: flex;
@@ -72,10 +72,11 @@
 .Menu-active {
   background-color: green;
   border: 1px solid green;
-  padding-bottom: 0;
   color: white;
   font-size: small;
   text-align: center;
+  padding-top: 4px;
+  padding-bottom: 1px;
 }
 .Menu-Inactive {
   background-color: red;

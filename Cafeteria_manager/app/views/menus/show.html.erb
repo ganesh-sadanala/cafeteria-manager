@@ -11,7 +11,7 @@
                   <%= hidden_field_tag :item_price,item.menu_item_price %>
                   <%= hidden_field_tag :menu_item_id,item.id %>
                   <%= hidden_field_tag :menu_id, menu_id %>
-                  <p class="MenuItem-name"><%= item.menu_item_name %></p>
+                  <p class="MenuItem-name HeaderFont"><%= item.menu_item_name %></p>
                   <div class="LeftRight">
                   <p class="MenuItem-price"> Price: &#x20b9; <%=item.menu_item_price%> </p>
                   <div style="display:flex;">
@@ -28,7 +28,7 @@
       </section>
       <section class="Food-cart">
         <h1 style="font-size:x-large;">Your Food Cart!</h1>
-        <% order_items=Order.find(session[:current_order_id]).order_items %>
+        <% order_items=Order.find(@current_order.id).order_items %>
         <div class="Item-info">
           <% if order_items.length !=0 %>
               <p>S.No</p>
@@ -49,9 +49,13 @@
             <% total_price+=item.price %>
           <% end %>
         </div>
-        <%= form_with url:orders_path, method: "post" do |form|%>
-          <%= hidden_field_tag :total_price, total_price %>
-          <%= form.submit  "Buy Now", class:"Table-button" %>
+        <% if order_items.length != 0 %>
+          <%= form_with url:orders_path, method: "post" do |form|%>
+            <%= hidden_field_tag :total_price, total_price %>
+            <%= form.submit  "Buy Now", class:"Table-button" %>
+          <% end %>
+        <% else %>
+          <p>Add Your Items..!</p>
         <% end %>
       </section>
     </section>

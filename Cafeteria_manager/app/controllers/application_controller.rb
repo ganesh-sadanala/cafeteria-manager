@@ -1,5 +1,18 @@
 class ApplicationController < ActionController::Base
   before_action :ensure_user_logged_in
+  before_action :vars
+
+  def vars
+    if @current_user == nil
+      @current_user = current_user
+    end
+    if @current_user
+      @current_order = @current_user.orders.find_by(status: "shopping_cart")
+      if (@current_order == nil)
+        @current_order = Order.new_order(@current_user.id)
+      end
+    end
+  end
 
   def ensure_user_logged_in
     unless current_user
