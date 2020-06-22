@@ -1,0 +1,24 @@
+<article>
+  <p style="font-size:xx-large;
+            text-align:center;
+            margin-bottom:20px;
+            padding-top:20px;
+            font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;">Billers</p>
+  <%= link_to new_clerk_path, method:"get" do%>
+    <%= image_tag 'user.png', class:"AddUserImg"%>
+  <% end %>
+  <div class="Menus" style="padding:10px;">
+    <% count = 1 %>
+    <% @billers.all.each do |clerk| %>
+      <div class="EditMenu">
+        <p> <%= count %>. </p>
+        <p class="EditMenu-name"><%= clerk.first_name.to_s + clerk.last_name.to_s %></p>
+        <p class="EditMenu-name"><%= clerk.email %> </p>
+        <%=link_to user_path(clerk.id), method:"delete",class:"Menu-form"   do%>
+          <%= image_submit_tag 'trash-can.svg', class: "EditMenu-img" %>
+        <%end%>
+        <% count = count + 1 %>
+      </div>
+    <%end%>
+  </div>
+</article>

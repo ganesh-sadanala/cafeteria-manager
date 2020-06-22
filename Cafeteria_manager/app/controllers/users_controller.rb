@@ -41,4 +41,9 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     end
   end
+
+  def destroy
+    User.find(params[:id]).delete
+    redirect_to manage_billers_path
+  end
 end

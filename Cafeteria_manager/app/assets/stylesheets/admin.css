@@ -1,0 +1,11 @@
+.AddUserImg {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 21px;
+  right: 20%;
+}
+.NewClerk {
+  display: flex;
+  justify-content: center;
+}

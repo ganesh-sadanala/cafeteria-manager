@@ -28,8 +28,13 @@
                 <%= link_to "Home", admin_index_path, method: "get", class:"NavBar-content"%>
               </li>
               <li class="NavBar-item-wrapper">
-                <i class="fa fa-truck"></i>
-                <%= link_to "Pending-orders", pending_orders_path, method: "get", class:'NavBar-content' %>
+                <%= link_to "Manage Billers", manage_billers_path, method: "get", class:"NavBar-content"%>
+              </li>
+            <% end %>
+            <% if ( @current_user.role == 'owner' || @current_user.role == 'clerk' ) %>
+              <li class="NavBar-item-wrapper">
+                  <i class="fa fa-truck"></i>
+                  <%= link_to "Pending-orders", pending_orders_path, method: "get", class:'NavBar-content' %>
               </li>
             <% end %>
             <li class="NavBar-item-wrapper">
