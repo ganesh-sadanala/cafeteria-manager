@@ -21,9 +21,12 @@
     <div>
     <% @invoices.each do |invoice| %>
       <div class="EditMenu">
-        <p><%= invoice.id %></p>
-        <p><%= invoice.user.first_name.to_s + invoice.user.last_name.to_s%></p>
-        <p>&#x20b9; <%= invoice.total_price %> </p>
+      <p><%= invoice.id %></p>
+      <p><%= invoice.user.first_name.to_s + invoice.user.last_name.to_s%></p>
+      <p>&#x20b9; <%= invoice.total_price %> </p>
+      <%= form_with url:order_path(invoice.id), method:"get", local:true do %>
+        <%= image_submit_tag 'enter.svg', class:"Enter-img" %>
+      <% end %>
       </div>
     <% end %>
   <% end %>

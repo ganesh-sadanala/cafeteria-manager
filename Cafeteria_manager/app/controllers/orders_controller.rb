@@ -4,6 +4,10 @@ class OrdersController < ApplicationController
     render "index"
   end
 
+  def show
+    @orders = Order.where(id: params[:id])
+  end
+
   def create
     @current_order.update!(total_price: params[:total_price].to_f,
                            status: "placed", ordered_at: DateTime.now)
