@@ -24,7 +24,7 @@
           <% end %>
       </div>
       <p style="position: relative;left: 38%; padding:10px;">Total Price: &#x20b9;<%= order.total_price %></p>
-      <%= form.submit "Mark as Delivered", class:"Table-button Pending-button" %>
+      <%= submit_tag "Mark as Delivered", data: {confirm: "Are you sure?"}, class:"Table-button Pending-button" %>
       <% end %>
     <% end %>
   </section>

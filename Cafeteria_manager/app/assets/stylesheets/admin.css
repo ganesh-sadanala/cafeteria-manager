@@ -9,3 +9,10 @@
   display: flex;
   justify-content: center;
 }
+.ReportsFilter {
+  display: flex;
+  justify-content: center;
+}
+.FilterItem {
+  margin-right: 10px;
+}

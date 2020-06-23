@@ -1,0 +1,32 @@
+<section style="padding-top:20px;">
+  <p class="ChangeFont">Owners</p>
+  <% count = 1 %>
+  <% @admins.each do |admin| %>
+    <div class="EditMenu">
+      <p> <%= count %>. </p>
+      <p> <%= admin.first_name.to_s + admin.last_name.to_s %> </p>
+      <p> <%= admin.email %> </p>
+    </div>
+    <% count = count + 1 %>
+  <% end %>
+  <% count = 1 %>
+  <p class="ChangeFont">Billers</p>
+  <% @billers.each do |clerk| %>
+    <div class="EditMenu">
+      <p> <%= count %>. </p>
+      <p> <%= clerk.first_name.to_s + clerk.last_name.to_s %> </p>
+      <p> <%= clerk.email %> </p>
+    </div>
+    <% count = count + 1 %>
+  <% end %>
+  <% count = 1 %>
+  <p class="ChangeFont">Customers</p>
+  <% @customers.each do |customer| %>
+    <div class="EditMenu">
+      <p> <%= count %>. </p>
+      <p> <%= customer.first_name.to_s + customer.last_name.to_s %> </p>
+      <p> <%= customer.email %> </p>
+    </div>
+    <% count = count + 1 %>
+  <% end %>
+</section>

@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   put "menus/edit_menu_details" => "menus#edit_menu_details", as: :edit_menu_details
   put "menu_item/edit_menu_items_details" => "menu_items#edit_menu_item_details", as: :edit_menu_item_details
-  get "manage_billers" => "admin#manage_billers", as: :manage_billers
-  get "new_clerk" => "admin#new_clerk", as: :new_clerk
-  post "create_clerk" => "admin#create_clerk", as: :create_clerk
+  get "admin/manage_billers" => "admin#manage_billers", as: :manage_billers
+  get "admin/new_clerk" => "admin#new_clerk", as: :new_clerk
+  post "admin/create_clerk" => "admin#create_clerk", as: :create_clerk
+  get "admin/users" => "admin#users", as: :show_users
+  get "admin/reports" => "admin#reports", as: :show_reports
   resources :menu_items
   resources :menus
   resources :users

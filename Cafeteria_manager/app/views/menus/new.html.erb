@@ -32,8 +32,8 @@
               <%= form_with( url:menu_item_path(menu.id), method:"get", local:true) do %>
                 <%= image_submit_tag 'plus-solid.svg', class: 'plus-img'%>
               <% end %>
-              <%=link_to menu_path(menu.id), method:"delete",class:"Menu-form"   do%>
-                <%= image_submit_tag 'trash-can.svg', class: "EditMenu-img" %>
+              <%= form_with url:menu_path(menu.id), method:"delete",class:"Menu-form"   do |form| %>
+                <%= image_submit_tag 'trash-can.svg',data: {confirm: "Are you sure?"}, class: "EditMenu-img" %>
               <%end%>
             </div>
         <% end %>

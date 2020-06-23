@@ -28,7 +28,13 @@
                 <%= link_to "Home", admin_index_path, method: "get", class:"NavBar-content"%>
               </li>
               <li class="NavBar-item-wrapper">
+                <%= link_to "Users", show_users_path, method: "get", class:"NavBar-content" %>
+              </li>
+              <li class="NavBar-item-wrapper">
                 <%= link_to "Manage Billers", manage_billers_path, method: "get", class:"NavBar-content"%>
+              </li>
+              <li class="NavBar-item-wrapper">
+                <%= link_to "Reports", show_reports_path, method: "get", class:"NavBar-content"%>
               </li>
             <% end %>
             <% if ( @current_user.role == 'owner' || @current_user.role == 'clerk' ) %>
