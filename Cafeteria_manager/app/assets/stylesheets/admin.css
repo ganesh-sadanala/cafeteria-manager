@@ -15,8 +15,13 @@
 }
 .FilterItem {
   margin-right: 10px;
+  padding: 5px;
 }
 .Enter-img {
   width: 20px;
   height: 20px;
+}
+.UserFilter {
+  margin-right: 12px;
+  padding: 8px;
 }
