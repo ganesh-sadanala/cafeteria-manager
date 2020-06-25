@@ -54,4 +54,21 @@ class AdminController < ApplicationController
     @to_date = params[:to_date] if params[:to_date]
     @username = params[:username] if params[:username]
   end
+
+  def delete_user
+    User.find(params[:user_id]).delete
+    redirect_to show_users_path
+  end
+
+  def role_change_clerk
+    user = User.find(params[:user_id])
+    user.update!(role: "clerk", password: user.password_digest)
+    redirect_to show_users_path
+  end
+
+  def role_change_customer
+    user = User.find(params[:user_id])
+    user.update!(role: "customer", password: user.password_digest)
+    redirect_to show_users_path
+  end
 end

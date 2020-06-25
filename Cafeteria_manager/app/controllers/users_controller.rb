@@ -35,6 +35,8 @@ class UsersController < ApplicationController
       role: "customer",
     )
     if new_user.save
+      new_user.update!(name: new_user.first_name.to_s + new_user.last_name.to_s,
+                       password: params[:password])
       redirect_to "/"
     else
       flash[:error] = new_user.errors.full_messages.join(",")

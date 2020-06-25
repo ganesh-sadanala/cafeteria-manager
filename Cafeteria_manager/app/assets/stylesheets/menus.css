@@ -28,6 +28,7 @@
   background: #ffffff;
   border: 1px solid #bfb8cc;
   border-radius: 4px;
+  filter: grayscale(1);
 }
 .Menu-grid {
   width: 100%;
@@ -63,11 +64,12 @@
 }
 .EditMenu-name {
   font-size: x-large;
-  color: black;
+  color: #333333;
   margin-right: 20px;
 }
-.EditMenu-img {
-  color: red;
+.EditMenu-img:hover {
+  filter: invert(31%) sepia(57%) saturate(7329%) hue-rotate(350deg)
+    brightness(100%) contrast(149%);
 }
 .Menu-active {
   background-color: green;

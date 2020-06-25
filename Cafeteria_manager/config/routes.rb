@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   post "admin/create_clerk" => "admin#create_clerk", as: :create_clerk
   get "admin/users" => "admin#users", as: :show_users
   get "admin/reports" => "admin#reports", as: :show_reports
+  delete "admin/delete_user" => "admin#delete_user", as: :delete_user
+  patch "admin/role_clerk" => "admin#role_change_clerk", as: :role_change_clerk
+  patch "admin/role_customer" => "admin#role_change_customer", as: :role_change_customer
   resources :menu_items
   resources :menus
   resources :users

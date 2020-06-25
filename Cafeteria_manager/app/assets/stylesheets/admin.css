@@ -25,3 +25,15 @@
   margin-right: 12px;
   padding: 8px;
 }
+.Delete-img {
+  width: 20px;
+  height: 20px;
+}
+.Delete-img:hover {
+  filter: invert(31%) sepia(57%) saturate(7329%) hue-rotate(350deg)
+    brightness(100%) contrast(149%);
+}
+.RoleChange {
+  width: 20px;
+  height: 20px;
+}

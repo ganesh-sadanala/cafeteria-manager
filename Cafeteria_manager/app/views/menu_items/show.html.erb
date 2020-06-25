@@ -30,7 +30,7 @@
               <% end %>
             <%=form_with url:menu_item_path(menu_item.id), method:"delete",class:"Menu-form"   do%>
               <%= hidden_field_tag :menu_id,@menu_id %>
-              <%= image_submit_tag 'trash-can.svg' %>
+              <%= image_submit_tag 'trash-can.svg',class:"EditMenu-img", data:{confirm:"Are you sure?"} %>
             <%end%>
           </div>
         <% end %>

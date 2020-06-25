@@ -22,12 +22,13 @@ html {
 .NavBar-content {
   padding-right: 10px;
   text-decoration: none;
-  color: black;
+  color: #555555;
 }
 
 .NavBar-content:hover {
   text-decoration: underline;
   text-decoration-color: lightblue;
+  color: black;
 }
 
 .NavBar .fa {
