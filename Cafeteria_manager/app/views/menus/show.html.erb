@@ -1,29 +1,28 @@
 <% menu = Menu.find(params[:id]).menu_items %>
 <% menu_id = params[:id] %>
 <article class="Wrapper">
-    <h1><%= flash[:error] %></h1>
     <section class="Wrapper-grid">
       <section class="MenuItem">
           <% menu.each do |item| %>
-              <div class="MenuItem-container">
+            <div class="MenuItem-container">
               <%= form_with url: cart_path, method: "post" do |form| %>
-                  <%= hidden_field_tag :item_name, item.menu_item_name %>
-                  <%= hidden_field_tag :item_price,item.menu_item_price %>
-                  <%= hidden_field_tag :menu_item_id,item.id %>
-                  <%= hidden_field_tag :menu_id, menu_id %>
-                  <p class="MenuItem-name HeaderFont"><%= item.menu_item_name %></p>
-                  <div class="LeftRight">
-                  <p class="MenuItem-price"> Price: &#x20b9; <%=item.menu_item_price%> </p>
-                  <div style="display:flex;">
-                    <p style="margin-right:10px;">Quantity: </p>
-                    <input type="number" name="quantity" id="quantity" value="1" min="1" max="8">
-                  </div>
-                  </div>
+                <%= hidden_field_tag :item_name, item.menu_item_name %>
+                <%= hidden_field_tag :item_price, item.menu_item_price %>
+                <%= hidden_field_tag :menu_item_id, item.id %>
+                <%= hidden_field_tag :menu_id, menu_id %>
+                <p class="MenuItem-name HeaderFont"> <%= item.menu_item_name %> </p>
+                <div class="LeftRight">
+                <p class="MenuItem-price"> Price: &#x20b9; <%=item.menu_item_price %> </p>
+                <div style="display:flex;">
+                  <p style="margin-right:10px;">Quantity: </p>
+                  <input type="number" name="quantity" id="quantity" value="1" min="1" max="8">
+                </div>
+                </div>
                 <div class="wrapper">
-                  <%= form.submit  "Add to Cart", class:"Table-button"%>
+                  <%= form.submit  "Add to Cart", class:"Table-button" %>
                 </div>
               <% end %>
-                </div>
+            </div>
           <% end %>
       </section>
       <section class="Food-cart">
@@ -39,26 +38,28 @@
               <p class="HeaderFont">Total Price</p>
               <p></p>
           <% end %>
-          <% item_count=1 %>
+          <% item_count = 1 %>
           <% order_items.each do |item| %>
               <p> <%= item_count %> </p>
               <p> <%= item.menu_item_name %> </p>
               <p> &#x20b9; <%= item.menu_item_price %> </p>
               <p> <%= item.quantity %> </p>
               <p> &#x20b9; <%= item.price %> </p>
-              <%= form_with url:order_item_path(item.id),method:"delete"  do%>
+              <%= form_with url: order_item_path(item.id), method:"delete"  do%>
                 <%= hidden_field_tag :menu_id, menu_id %>
                 <%= image_submit_tag 'minus.svg', class:"Minus" %>
               <% end %>
             <% item_count = item_count + 1 %>
-            <% total_price+=item.price %>
+            <% total_price += item.price %>
           <% end %>
         </div>
         <% if order_items.length != 0 %>
-          <p style="padding:10px;">Total Price: &#x20b9; <%= total_price %></p>
-          <%= form_with url:orders_path, method: "post" do |form|%>
+          <p style="padding:10px;">Total Price: &#x20b9; <%= total_price %> </p>
+          <%= form_with url:orders_path, method: "post" do |form| %>
             <%= hidden_field_tag :total_price, total_price %>
-            <%= submit_tag value="Buy Now", data: {confirm: "Confirm Order?", disable_with: "Placing Order.."}, class: "Table-button" %>
+            <%= submit_tag value = "Buy Now",
+                           data: {confirm: "Confirm Order?", disable_with: "Placing Order.."},
+                           class: "Table-button" %>
           <% end %>
         <% else %>
           <p>Add Your Items here..!</p>

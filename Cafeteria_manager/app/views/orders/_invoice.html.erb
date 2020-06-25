@@ -10,10 +10,10 @@
         <p class="HeaderFont">Total Price</p>
         <% order.order_items.each do |order_item| %>
           <p> <%= count %> </p>
-          <p><%= order_item.menu_item_name%></p>
-          <p> &#x20b9;<%= order_item.menu_item_price%></p>
-          <p style="text-align:center;"><%= order_item.quantity %></p>
-          <p> &#x20b9;<%= order_item.price %></p>
+          <p> <%= order_item.menu_item_name%> </p>
+          <p> &#x20b9;<%= order_item.menu_item_price %></p>
+          <p style="text-align:center;"> <%= order_item.quantity %> </p>
+          <p> &#x20b9;<%= order_item.price %> </p>
           <% count = count + 1 %>
         <% end %>
       </div>
@@ -25,14 +25,14 @@
           <p>Delivered On : <%= order.delivered_at.localtime.to_s(:long) %> </p>
         <% end %>
       </div>
-      <p style="position: relative;left: 38%; padding:10px;">Total Price: &#x20b9;<%= order.total_price %></p>
+      <p style="position: relative;left: 38%; padding:10px;">Total Price: &#x20b9;<%= order.total_price %> </p>
       <% if order.status == "delivered" %>
         <div class="OrderStatus">
           <%= submit_tag "Order Delivered",disabled: true, class: "OrderDelivered" %>
         </div>
       <% elsif order.status == "placed" %>
         <div class="OrderStatus">
-          <%= submit_tag "Order Pending",disabled: true, class: "OrderPending" %>
+          <%= submit_tag "Order Pending", disabled: true, class: "OrderPending" %>
         </div>
       <% end %>
     </div>

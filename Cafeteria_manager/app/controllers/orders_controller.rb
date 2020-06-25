@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
   def create
     @current_order.update!(total_price: params[:total_price].to_f,
                            status: "placed", ordered_at: DateTime.now)
-    @current_order.save!
     redirect_to order_path(@current_order.id)
   end
 
@@ -40,7 +39,7 @@ class OrdersController < ApplicationController
         price: params[:quantity].to_f * params[:item_price].to_f,
       )
       if (order_item.save)
-        # nothing
+        # do nothing
       else
         flash[:error] = order_item.errors.full_messages.join(",")
       end
