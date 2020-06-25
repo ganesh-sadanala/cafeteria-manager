@@ -56,7 +56,8 @@ class AdminController < ApplicationController
   end
 
   def delete_user
-    User.find(params[:user_id]).delete
+    user = User.find(params[:user_id])
+    user.destroy
     redirect_to show_users_path
   end
 

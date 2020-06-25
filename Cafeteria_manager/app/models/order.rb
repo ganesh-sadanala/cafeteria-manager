@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
-  has_many :order_items, :dependent => :destroy
   belongs_to :user
+  has_many :order_items, dependent: :delete_all
 
   def self.new_order(user_id)
     new_order = Order.create!(user_id: user_id, status: "shopping_cart", total_price: 0)

@@ -45,7 +45,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).delete
+    user = User.find(params[:user_id])
+    user.destroy
     redirect_to manage_billers_path
   end
 end
