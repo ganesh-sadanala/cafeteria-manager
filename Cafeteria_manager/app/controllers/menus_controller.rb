@@ -56,8 +56,11 @@ class MenusController < ApplicationController
     new_name = params[:menu_name]
     menu = Menu.find(id)
     menu.menu_name = new_name
-    menu.save!
-    session[:edit_menu_id] = -1
+    if menu.save
+      session[:edit_menu_id] = -1
+    else
+      flash[:error] = menu.errors.full_messages.join(",")
+    end
     redirect_to new_menu_path
   end
 end

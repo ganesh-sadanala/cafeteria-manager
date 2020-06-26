@@ -18,7 +18,9 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     if user && user.authenticate(params[:password])
       user.update!(email: params[:email], first_name: params[:first_name], last_name: params[:last_name], password: params[:password])
-      user.save!
+      if !user.save
+        flash[:error] = user.errors.full_messages.join(",")
+      end
       redirect_to user_path(user.id)
     else
       flash[:error] = "Invalid Password"

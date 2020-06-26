@@ -40,8 +40,11 @@ class MenuItemsController < ApplicationController
     menu_item = MenuItem.find(id)
     menu_item.menu_item_name = new_name
     menu_item.menu_item_price = new_price
-    menu_item.save!
-    session[:edit_menu_item_id] = -1
+    if menu_item.save
+      session[:edit_menu_item_id] = -1
+    else
+      flash[:error] = menu_item.errors.full_messages.join(",")
+    end
     redirect_to menu_item_path(params[:menu_id])
   end
 end
