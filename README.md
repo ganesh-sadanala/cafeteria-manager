@@ -11,3 +11,7 @@
 ## Database
 
 - PostgreSQL
+
+#### Admin Credentials
+- Email: yummy-cafeteria@gmail.com
+- Password: owner
