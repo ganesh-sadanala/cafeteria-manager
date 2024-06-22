@@ -2,11 +2,12 @@
 
 ## Frontend
 
-- HTML,CSS
+- HTML,CSS, Javascript
 
 ## Backend
 
 - Ruby On Rails
+- MVC Architecture
 
 ## Database
 
